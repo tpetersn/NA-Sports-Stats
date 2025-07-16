@@ -1,0 +1,136 @@
+<!-- src/components/BarChart.vue -->
+<template>
+  <div>
+    <!-- Dropdowns -->
+    <div class="controls">
+      <select v-model="selectedSeason">
+        <option v-for="season in seasons" :key="season" :value="season">
+          {{ season }}
+        </option>
+      </select>
+
+      <select v-model="selectedMetric">
+        <option v-for="metric in metrics" :key="metric" :value="metric">
+          {{ metric.charAt(0).toUpperCase() + metric.slice(1) }}
+        </option>
+      </select>
+
+      <select v-model="sortOrder">
+        <option value="desc">Highest to Lowest</option>
+        <option value="asc">Lowest to Highest</option>
+      </select>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-wrapper">
+      <Bar :data="chartData" :options="chartOptions" />
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed } from 'vue'
+import { Bar } from 'vue-chartjs'
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+} from 'chart.js'
+import { nhlStats } from '../data/nhlStats.js'
+
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+
+// dropdown options
+const seasons = Object.keys(nhlStats)
+const selectedSeason = ref('2024-2025')
+const metrics = ['points', 'wins', 'losses', 'ties']
+const selectedMetric = ref('points')
+const sortOrder = ref('desc')
+
+// sort & prepare data
+const sortedStats = computed(() => {
+  const stats = [...nhlStats[selectedSeason.value]]
+  stats.sort((a, b) => {
+    return sortOrder.value === 'asc'
+      ? a[selectedMetric.value] - b[selectedMetric.value]
+      : b[selectedMetric.value] - a[selectedMetric.value]
+  })
+  return stats
+})
+
+const chartData = computed(() => ({
+  labels: sortedStats.value.map(team => team.team),
+  datasets: [{
+    label: selectedMetric.value.charAt(0).toUpperCase() + selectedMetric.value.slice(1),
+    data: sortedStats.value.map(team => team[selectedMetric.value]),
+    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+    barThickness: 8
+  }]
+}))
+const chartOptions = computed(() => ({
+  indexAxis: 'y',
+  responsive: true,
+  maintainAspectRatio: false,
+
+  plugins: {
+    legend: { display: false },
+
+  },
+
+  layout: {
+    padding: {
+      left: 40      // keep your logo padding
+    }
+  },
+
+  scales: {
+    x: {
+      position: 'top',      // move the numbers axis to the top
+      title: {
+        display: true,
+        text: selectedMetric.value.charAt(0).toUpperCase()
+            + selectedMetric.value.slice(1),  // e.g. "Points"
+        font: { size: 18 },
+        padding: { bottom: 10 }   // space between “Points” and the bars
+      },
+      beginAtZero: true
+    },
+
+    y: {
+      // keep your larger tick labels
+      ticks: {
+        font: { size: 18 }
+      },
+      title: {
+        display: true,
+        text: 'Teams',
+        font: { size: 18 },
+        padding: { top: -35, bottom: 10 }      // space between “Teams” and the first bar label
+      }
+    }
+  }
+}))
+
+
+</script>
+
+<style scoped>
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.chart-wrapper {
+  height: 1050px;
+  width: 95%;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: white;
+}
+</style>
