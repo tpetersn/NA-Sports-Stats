@@ -1,0 +1,35 @@
+
+{
+  "title": "North American Sports Statistics",
+  "description": "This page shows statistics on North American hockey and soccer teams.",
+  "nhl-description": "We show NHL team statistics from the past 5 seasons in a horizontal bar chart.",
+  "mls-description": "We show MLS team statistics from the past 8 seasons in a line chart.",
+
+  "nhlStats": "NHL Team Statistics",
+  "mlsStats": "MLS Team Statistics",
+
+  "team": "Team",
+  "teams": "Teams",
+
+  "compareWith": "Compare With",
+  "compare": "Compare",
+
+  "stat": "Statistic",
+  "points": "Points",
+  "wins": "Wins",
+  "losses": "Losses",
+  "ties": "Ties",
+  "highToLow": "Highest to Lowest",
+  "lowToHigh": "Lowest to Highest",
+  "none": "None",
+  "amount": "Amount",
+
+  "nhl": "NHL",
+  "mls": "MLS",
+
+  "selectLanguage": "Language",
+  "year": "Year",
+  "season": "Season",
+
+  "copyrights": "All copyrights belong to NHL & MLS"
+}

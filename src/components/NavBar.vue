@@ -1,31 +1,77 @@
 <template>
-  <header class="navbar">
-    <h1>North American Sports Statistics</h1>
-  </header>
+  <nav class="ff-navbar">
+    <!-- Left: Title -->
+    <div class="ff-title">{{ $t('title') }}</div>
+
+    <!-- Right: Language Selector -->
+    <div class="ff-lang-selector">
+      <GlobeIcon class="globe-icon" />
+      <select v-model="currentLocale" @change="changeLanguage">
+        <option v-for="(langName, localeCode) in languages" :key="localeCode" :value="localeCode">
+          {{ langName }}
+        </option>
+      </select>
+    </div>
+  </nav>
 </template>
 
-<style>
-/* remove default body margin so header truly spans edge-to-edge */
-body {
-  margin: 0;
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import { ref, watch } from 'vue'
+import GlobeIcon from '../assets/icons/globe.vue' 
+
+const { locale } = useI18n()
+
+const languages = {
+  en: 'English',
+  es: 'Español'
 }
 
-/* the nav itself */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+const currentLocale = ref(locale.value)
+
+function changeLanguage() {
+  locale.value = currentLocale.value
+}
+</script>
+
+<style scoped>
+.ff-navbar {
   width: 100%;
-  background-color: #dff6fd;
-  color: #1c1c1c;
+  margin: 0;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #585e5fd2;
+  border: 2px solid #000000;
 }
 
-/* make sure the title stays flush left inside it */
-.navbar h1 {
-  margin: 0;
-  font-size: 1.5rem;
+.ff-title {
+  font-size: 1.8rem;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.788);
+}
+
+.ff-lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+select {
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.globe-icon {
+  width: 20px;
+  height: 20px;
 }
 </style>

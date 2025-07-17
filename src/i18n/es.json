@@ -1,0 +1,39 @@
+
+{
+  "title": "Estadísticas Deportivas de América del Norte",
+  "description": "Esta página muestra estadísticas de equipos de hockey y fútbol de América del Norte.",
+  "nhl-description": "Mostramos estadísticas de equipos de la NHL de las últimas 5 temporadas en un gráfico de barras horizontal.",
+  "mls-description": "Mostramos estadísticas de equipos de la MLS de las últimas 8 temporadas en un gráfico de líneas.",
+
+  "nhlStats": "Estadísticas de Equipos de la NHL",
+  "mlsStats": "Estadísticas de Equipos de la MLSMLS Team Statistics",
+
+  "team": "Equipo",
+  "teams": "Equipos",
+
+  "compareWith": "Comparar con",
+  "compare": "Comparar",
+
+
+  "points": "Puntos",
+  "wins": "Victorias",
+  "losses": "Derrotas",
+  "ties": "Empates",
+  "highToLow": "Mayor a Menor",
+  "lowToHigh": "Menor a Mayor",
+  "none": "Ninguno",
+
+
+  "nhl": "NHL",
+  "mls": "MLS",
+
+  "season": "Season",
+
+
+  "stat": "Estadística",
+  "selectLanguage": "Idioma",
+  "year": "Año",
+  "amount": "Cantidad",
+
+  "copyrights": "Todos los derechos de autor pertenecen a la NHL y la MLS"
+}
