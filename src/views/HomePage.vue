@@ -24,6 +24,11 @@
         <LineChart/>
       </div>
 
+      <div>
+        <h2 class="nba-stats">{{$t('nbaStats')}}</h2>
+        <ColumnChart/>
+      </div>
+
     </div>
 
   </div>
@@ -34,6 +39,7 @@
 <script setup>
 import BarChart from '../components/BarChart.vue';
 import LineChart from '../components/LineChart.vue';
+import ColumnChart from '../components/ColumnChart.vue';
 import { useI18n} from 'vue-i18n';
 
 </script>

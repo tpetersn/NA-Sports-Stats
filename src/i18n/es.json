@@ -6,7 +6,8 @@
   "mls-description": "Mostramos estadísticas de equipos de la MLS de las últimas 8 temporadas en un gráfico de líneas.",
 
   "nhlStats": "Estadísticas de Equipos de la NHL",
-  "mlsStats": "Estadísticas de Equipos de la MLSMLS Team Statistics",
+  "mlsStats": "Estadísticas de Equipos de la MLS",
+  "nbaStats": "Estadísticas de Equipos de la NBA",
 
   "team": "Equipo",
   "teams": "Equipos",
@@ -29,6 +30,9 @@
 
   "season": "Temporada",
   "sort": "Ordenar",
+
+  "leftStat": "Estadística Izquierda",
+  "rightStat": "Estadística Derecha",
 
 
   "stat": "Estadística",

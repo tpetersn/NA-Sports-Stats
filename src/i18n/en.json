@@ -7,6 +7,7 @@
 
   "nhlStats": "NHL Team Statistics",
   "mlsStats": "MLS Team Statistics",
+  "nbaStats": "NBA Team Statistics",
 
   "team": "Team",
   "teams": "Teams",
@@ -31,6 +32,9 @@
   "year": "Year",
   "season": "Season",
   "sort": "Sort",
+
+  "leftStat": "Left Statistic",
+  "rightStat": "Right Statistic",
 
   "copyrights": "All copyrights belong to NHL & MLS"
 }
