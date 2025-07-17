@@ -1,5 +1,8 @@
-# Vue 3 + Vite
+North American Sport Stats
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a repo for my SEG3125 assignment 5. 
+I am ussing Vue 3 + Vite for this project. 
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Right now this website only shows two charts, the first being a bar chart, showing all NHL teams, the second being a line chart, showing all MLS teams and their stats from the past five seasons.
+
+This webpage is available in English as well as in Spanish.

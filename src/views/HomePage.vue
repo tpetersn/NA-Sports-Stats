@@ -1,90 +1,118 @@
 <template>
   <div class="home-container">
-    <!-- Hero Image + Tagline -->
-    <div class="hero-section">
-      <img src="/images/hockey.webp" alt="hockey rink" class="hero-img" />
-      <p class="hero-text">This page shows NHL teams statistics<br />from the past ten years.</p>
+    <div class="description-section">
+      <p class="description-text">{{ $t('description') }}</p>
+      <img src="/images/hockey-stadium2.webp" alt="hockey rink" class="hockey-img" />
+      <p class="nhl-description">{{ $t('nhl-description') }}</p>
+
+      
+      
+
+      <div>
+          <h2 class="nhl-stats">{{ $t('nhlStats') }}</h2>
+          <BarChart/>
+      </div>
+
+      <div>
+        <img src="/images/soccer-pitch2.webp" alt="hockey rink" class="soccer-img" />
+        <p class="mls-description">{{ $t('mls-description') }}</p>
+      </div>
+
+      
+      <div>
+        <h2 class="mls-stats">{{$t('mlsStats')}}</h2>
+        <LineChart/>
+      </div>
+
     </div>
 
   </div>
-  <div>
-    <h2>NHL Team Statistics</h2>
-    <BarChart/>
-</div>
-  <div>
-    <h2>MLS Team Statistics</h2>
-    <LineChart/>
-</div>
+
 
 </template>
 
 <script setup>
 import BarChart from '../components/BarChart.vue';
 import LineChart from '../components/LineChart.vue';
+import { useI18n} from 'vue-i18n';
 
 </script>
 
 <style scoped>
 .home-container {
-  width: auto;
-
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   align-items: center;
-  background-color: #fefefe;
+  background-color: #d42f2f;
 }
 
-/* Hero section */
-.hero-section {
+.description-section {
   text-align: center;
-  background-color: #dff6fd;
+  background-color: #fffbd7;
   padding: 1rem;
   width: 100%;
-  max-width: 600px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
 
-.hero-img {
+.hockey-img {
   width: 100%;
   max-height: 180px;
   object-fit: cover;
   margin-bottom: 0.5rem;
+  border: 1.2px solid #000000;
+  border-radius: 2px;
+}
+.soccer-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border: 1.2px solid #000000;
+  border-radius: 2px;
+
 }
 
-.hero-text {
+.description-text {
   font-style: italic;
-  font-size: 1rem;
-  margin: 0;
-}
-
-/* Grid for buttons */
-.content-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin-top: 1rem;
-}
-
-.left-box, .right-box {
-  text-align: center;
-  max-width: 250px;
-}
-
-.action-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.5rem;
-  background-color: lightgray;
-  border-radius: 10px;
+  font-size: 1.5rem;
+  margin:3.8rem;
   font-weight: bold;
-  text-decoration: none;
-  color: black;
-  transition: background-color 0.2s;
+  color: #000000;
+  text-shadow: 1px 1px 1px rgba(202, 202, 202, 0.788);
 }
 
-.action-btn:hover {
-  background-color: #c0c0c0;
+.nhl-description {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  color: #000000;
+  text-shadow: 1px 1px 1px rgba(202, 202, 202, 0.788);
 }
+.mls-description {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  color: #000000;
+  text-shadow: 1px 1px 1px rgba(202, 202, 202, 0.788);
+}
+
+.nhl-stats {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 1px rgba(202, 202, 202, 0.788);
+  border-bottom: 1px solid #707070;
+}
+.mls-stats {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 1px rgba(202, 202, 202, 0.788);
+}
+
+
 </style>

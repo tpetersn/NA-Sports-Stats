@@ -1,24 +1,32 @@
-<!-- src/components/BarChart.vue -->
 <template>
   <div>
     <!-- Dropdowns -->
     <div class="controls">
-      <select v-model="selectedSeason">
-        <option v-for="season in seasons" :key="season" :value="season">
-          {{ season }}
-        </option>
-      </select>
+       <label>
+          {{ $t('season') }}:
+          <select v-model="selectedSeason">
+            <option v-for="season in seasons" :key="season" :value="season">
+              {{ season }}
+            </option>
+          </select>
+        </label>
 
-      <select v-model="selectedMetric">
-        <option v-for="metric in metrics" :key="metric" :value="metric">
-          {{ metric.charAt(0).toUpperCase() + metric.slice(1) }}
-        </option>
-      </select>
+      <label>
+        {{ $t('stat') }}:
+        <select v-model="selectedMetric">
+          <option v-for="metric in metrics" :key="metric" :value="metric">
+            {{ $t(metric) }}
+          </option>
+        </select>
+      </label>
 
-      <select v-model="sortOrder">
-        <option value="desc">Highest to Lowest</option>
-        <option value="asc">Lowest to Highest</option>
-      </select>
+      <label>
+        {{ $t('sort') }}:
+        <select v-model="sortOrder">
+          <option value="desc">{{ $t('highToLow') }}</option>
+          <option value="asc">{{ $t('lowToHigh') }}</option>
+        </select>
+      </label>
     </div>
 
     <!-- Chart -->
@@ -41,6 +49,7 @@ import {
   LinearScale
 } from 'chart.js'
 import { nhlStats } from '../data/nhlStats.js'
+import { useI18n } from 'vue-i18n'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
@@ -50,6 +59,8 @@ const selectedSeason = ref('2024-2025')
 const metrics = ['points', 'wins', 'losses', 'ties']
 const selectedMetric = ref('points')
 const sortOrder = ref('desc')
+
+const { t } = useI18n()
 
 // sort & prepare data
 const sortedStats = computed(() => {
@@ -83,33 +94,32 @@ const chartOptions = computed(() => ({
 
   layout: {
     padding: {
-      left: 40      // keep your logo padding
+      left: 40     
     }
   },
 
   scales: {
     x: {
-      position: 'top',      // move the numbers axis to the top
+      position: 'top',     
       title: {
         display: true,
-        text: selectedMetric.value.charAt(0).toUpperCase()
-            + selectedMetric.value.slice(1),  // e.g. "Points"
+        text: t(selectedMetric.value),  
         font: { size: 18 },
-        padding: { bottom: 10 }   // space between “Points” and the bars
+        padding: { bottom: 10 }   
       },
       beginAtZero: true
     },
 
     y: {
-      // keep your larger tick labels
+      
       ticks: {
         font: { size: 18 }
       },
       title: {
         display: true,
-        text: 'Teams',
+        text: t('teams'),
         font: { size: 18 },
-        padding: { top: -35, bottom: 10 }      // space between “Teams” and the first bar label
+        padding: { top: -35, bottom: 10 }      
       }
     }
   }
@@ -124,13 +134,14 @@ const chartOptions = computed(() => ({
   gap: 1rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
+
 }
 .chart-wrapper {
-  height: 1050px;
-  width: 95%;
+  height: 800px;
   overflow-y: auto;
   border: 1px solid #ccc;
   padding: 1rem;
   background: white;
+  
 }
 </style>

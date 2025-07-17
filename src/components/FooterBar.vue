@@ -1,8 +1,18 @@
 <template>
   <footer class="footer">
-    <p>All copyrights belong to NHL</p>
+    
+    <p>
+      <CopyRightIcon class="copyright-icon" />
+      {{ $t('copyrights')}}</p>
   </footer>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n';
+import CopyRightIcon from '../assets/icons/copyright.vue'
+
+const { t } = useI18n();
+</script>
 
 <style scoped>
 .footer {
@@ -14,5 +24,8 @@
   font-style: italic;
   position: relative;
 
+}
+.copyright-icon {
+  width: 1rem;
 }
 </style>

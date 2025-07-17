@@ -1,21 +1,37 @@
 <template>
   <div>
     <div class="controls">
-      <select v-model="selectedTeam">
-        <option v-for="team in Teams" :key="team">{{ team }}</option>
-      </select>
+      <label>
+        {{ $t('team') }}:
+        <select v-model="selectedTeam">
+          <option v-for="team in Teams" :key="team">{{ team }}</option>
+        </select>
+      </label>
 
-      <select v-model="selectedStat">
-        <option v-for="stat in stats" :key="stat" :value="stat">
-          {{ stat.charAt(0).toUpperCase() + stat.slice(1) }}
-        </option>
-      </select>
-      <select v-model="compareTeam">
-        <option value="">None</option>
-        <option v-for="team in Teams" :key="team" :value="team" :disabled="team === selectedTeam">
-          {{ team }}
-        </option>
-      </select>
+      <label>
+        {{ $t('stat') }}:
+        <select v-model="selectedStat">
+          <option v-for="stat in stats" :key="stat" :value="stat">
+            {{ $t(stat) }}
+          </option>
+        </select>
+      </label>
+
+
+      <label>
+        {{ $t('compare') }}:
+        <select v-model="compareTeam">
+          <option value="">{{ $t('none') }}</option>
+          <option
+            v-for="team in Teams"
+            :key="team"
+            :value="team"
+            :disabled="team === selectedTeam"
+          >
+            {{ team }}
+          </option>
+        </select>
+      </label>
     </div>
 
     <div class="chart-wrapper">
@@ -39,13 +55,15 @@ import {
 } from 'chart.js'
 
 import { mlsStats } from '../data/mlsStats.js'
+import { useI18n } from 'vue-i18n'
 
 ChartJS.register(Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale)
 
 const stats = ['points', 'wins', 'losses', 'ties']
 const compareTeam = ref('')
+const { t } = useI18n()
 
-// Extract all teams (flatten + deduplicate)
+// Extract all teams
 const Teams = Array.from(
   new Set(
     Object.values(mlsStats)
@@ -76,7 +94,7 @@ const chartData = computed(() => {
     {
       label: selectedTeam.value,
       data: primaryTeamData,
-      borderColor: 'rgba(54, 162, 235, 1)',      // Blue
+      borderColor: 'rgba(54, 162, 235, 1)',      
       backgroundColor: 'rgba(54, 162, 235, 0.2)',
       fill: false,
       tension: 0.3
@@ -87,11 +105,11 @@ const chartData = computed(() => {
     datasets.push({
       label: compareTeam.value,
       data: compareTeamData,
-      borderColor: 'rgba(255, 99, 132, 1)',      // Red
+      borderColor: 'rgba(255, 99, 132, 1)',     
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       fill: false,
       tension: 0.3,
-      borderDash: [5, 5]                         // Dashed line for clarity
+      borderDash: [5, 5]                        
     })
   }
 
@@ -109,8 +127,8 @@ const chartOptions = computed(() => ({
     title: {
       display: true,
       text: compareTeam.value
-        ? `${selectedTeam.value} vs ${compareTeam.value} — ${selectedStat.value.charAt(0).toUpperCase() + selectedStat.value.slice(1)}`
-        : `${selectedTeam.value} — ${selectedStat.value.charAt(0).toUpperCase() + selectedStat.value.slice(1)}`,
+        ? `${selectedTeam.value} vs ${compareTeam.value} — ${t(selectedStat.value)}`
+        : `${selectedTeam.value} — ${t(selectedStat.value)}`,
       font: { size: 22 },
       padding: { top: 10, bottom: 20 }
     }
@@ -120,13 +138,13 @@ const chartOptions = computed(() => ({
       beginAtZero: true,
       title: {
         display: true,
-        text: 'Amount'
+        text: t('amount')
       }
     },
     x: {
       title: {
         display: true,
-        text: 'Year'
+        text: t('year')
       }
     }
   }
