@@ -1,7 +1,12 @@
 <template>
   <div class="home-container">
     <div class="description-section">
-      <p class="description-text">{{ $t('description') }}</p>
+      
+      <p class="description-text">{{ $t('description1') }}</p>
+      <p class="description2-text">{{ $t('description2') }}</p>
+      <p class="description3-text">{{ $t('description3') }}</p>
+
+
       <img src="/images/hockey-stadium2.webp" alt="hockey rink" class="hockey-img" />
       <p class="nhl-description">{{ $t('nhl-description') }}</p>
 
@@ -14,7 +19,7 @@
       </div>
 
       <div>
-        <img src="/images/soccer-pitch2.webp" alt="hockey rink" class="soccer-img" />
+        <img src="/images/soccer-pitch2.webp" alt="soccer arena" class="soccer-img" />
         <p class="mls-description">{{ $t('mls-description') }}</p>
       </div>
 
@@ -22,6 +27,11 @@
       <div>
         <h2 class="mls-stats">{{$t('mlsStats')}}</h2>
         <LineChart/>
+      </div>
+
+      <div>
+        <img src="/images/bball-areana1.webp" alt="basketball arena" class="soccer-img" />
+        <p class="mls-description">{{ $t('mls-description') }}</p>
       </div>
 
       <div>
@@ -83,7 +93,27 @@ import { useI18n} from 'vue-i18n';
 .description-text {
   font-style: italic;
   font-size: 1.75rem;
-  margin:3.8rem;
+  margin:5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 1px #619fa8;
+  text-decoration: underline;
+}
+
+.description2-text {
+  font-style:normal;
+  font-size: 1.25rem;
+  margin:2rem;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 1px #619fa8;
+}
+.description3-text {
+  font-style:normal;
+  font-size: 1.25rem;
+  margin:2rem;
+  margin-bottom: 10rem;
   font-weight: bold;
   color: #000000;
   text-shadow: 1px 1px 1px #619fa8;

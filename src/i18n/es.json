@@ -4,6 +4,7 @@
   "description": "Esta página muestra estadísticas de equipos de hockey y fútbol de América del Norte.",
   "nhl-description": "Mostramos estadísticas de equipos de la NHL de las últimas 5 temporadas en un gráfico de barras horizontal.",
   "mls-description": "Mostramos estadísticas de equipos de la MLS de las últimas 8 temporadas en un gráfico de líneas.",
+  "nba-description": "Mostramos estadísticas de equipos de la NBA de las últimas 5 temporadas en un gráfico de líneas.",
 
   "nhlStats": "Estadísticas de Equipos de la NHL",
   "mlsStats": "Estadísticas de Equipos de la MLS",
@@ -39,6 +40,7 @@
   "selectLanguage": "Idioma",
   "year": "Año",
   "amount": "Cantidad",
+  "FGM": "FGM",
 
   "copyrights": "Todos los derechos de autor pertenecen a la NHL y la MLS"
 }

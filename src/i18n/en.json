@@ -1,9 +1,13 @@
 
 {
   "title": "North American Sports Statistics",
-  "description": "This page shows statistics on North American hockey and soccer teams.",
+  "description1": "This website shows statistics on multiple North American sports! ",
+  "description2": " We offer statistics on NHL, MLS and NBA teams, showing their stats in different ways.",
+  "description3": "Scroll through the website to find out more!",
+
   "nhl-description": "We show NHL team statistics from the past 5 seasons in a horizontal bar chart.",
   "mls-description": "We show MLS team statistics from the past 8 seasons in a line chart.",
+  "nba-description": "We show NBA team statistics from the past 5 seasons in a column chart.",
 
   "nhlStats": "NHL Team Statistics",
   "mlsStats": "MLS Team Statistics",
@@ -24,6 +28,7 @@
   "lowToHigh": "Lowest to Highest",
   "none": "None",
   "amount": "Amount",
+  "FGM": "FGM",
 
   "nhl": "NHL",
   "mls": "MLS",

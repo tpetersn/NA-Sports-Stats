@@ -58,8 +58,8 @@ const { t } = useI18n()
 
 // Stats available
 const seasons = Object.keys(nbaStats)
-const metrics = ['points', 'wins', 'losses', 'ties']
-const selectedSeason = ref('2025')
+const metrics = ['points', 'wins', 'losses', 'FGM']
+const selectedSeason = ref('2024-2025')
 const leftMetric = ref('wins')
 const rightMetric = ref('losses')
 
