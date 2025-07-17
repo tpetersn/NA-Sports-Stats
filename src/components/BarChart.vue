@@ -78,7 +78,7 @@ const chartData = computed(() => ({
   datasets: [{
     label: selectedMetric.value.charAt(0).toUpperCase() + selectedMetric.value.slice(1),
     data: sortedStats.value.map(team => team[selectedMetric.value]),
-    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+    backgroundColor: '#009fbb',
     barThickness: 8
   }]
 }))
@@ -113,13 +113,13 @@ const chartOptions = computed(() => ({
     y: {
       
       ticks: {
-        font: { size: 18 }
+        font: { size: 18.5 }
       },
       title: {
         display: true,
         text: t('teams'),
-        font: { size: 18 },
-        padding: { top: -35, bottom: 10 }      
+        font: { size: 20 },
+        padding: { top: -35, bottom: 20 }      
       }
     }
   }
@@ -137,11 +137,14 @@ const chartOptions = computed(() => ({
 
 }
 .chart-wrapper {
-  height: 800px;
+  height: 900px;
+  width: 100%;
   overflow-y: auto;
   border: 1px solid #ccc;
   padding: 1rem;
   background: white;
   
 }
+
+
 </style>

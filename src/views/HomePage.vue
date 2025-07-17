@@ -18,7 +18,7 @@
         <p class="mls-description">{{ $t('mls-description') }}</p>
       </div>
 
-      
+
       <div>
         <h2 class="mls-stats">{{$t('mlsStats')}}</h2>
         <LineChart/>
@@ -49,7 +49,7 @@ import { useI18n} from 'vue-i18n';
 
 .description-section {
   text-align: center;
-  background-color: #fffbd7;
+  background-color: #fffce2;
   padding: 1rem;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -58,7 +58,7 @@ import { useI18n} from 'vue-i18n';
 
 .hockey-img {
   width: 100%;
-  max-height: 180px;
+  max-height: 225px;
   object-fit: cover;
   margin-bottom: 0.5rem;
   border: 1.2px solid #000000;
@@ -76,11 +76,11 @@ import { useI18n} from 'vue-i18n';
 
 .description-text {
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin:3.8rem;
   font-weight: bold;
   color: #000000;
-  text-shadow: 1px 1px 1px rgba(202, 202, 202, 0.788);
+  text-shadow: 1px 1px 1px #619fa8;
 }
 
 .nhl-description {
@@ -108,10 +108,13 @@ import { useI18n} from 'vue-i18n';
   border-bottom: 1px solid #707070;
 }
 .mls-stats {
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem;
   font-weight: bold;
   color: #000000;
   text-shadow: 1px 1px 1px rgba(202, 202, 202, 0.788);
+  border-bottom: 1px solid #707070;
 }
 
 

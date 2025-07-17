@@ -43,8 +43,8 @@ function changeLanguage() {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  background-color: #585e5fd2;
-  border: 2px solid #000000;
+  background-color: #619fa8;
+  border: 2px solid #555555;
 }
 
 .ff-title {

@@ -27,7 +27,8 @@
   "nhl": "NHL",
   "mls": "MLS",
 
-  "season": "Season",
+  "season": "Temporada",
+  "sort": "Ordenar",
 
 
   "stat": "Estadística",
