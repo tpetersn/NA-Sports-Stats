@@ -25,9 +25,22 @@
   "lowToHigh": "Menor a Mayor",
   "none": "Ninguno",
 
+  "pgaStats": "Estadísticas de PGA",
+  "name": "Nombre",
+  "rank": "Rango",
+  "score": "Puntaje",
+  "player": "Jugador",
+  "avgPoints": "Puntos Promedio",
+  "totalPoints": "Puntos Totales",
+  "pointsLost": "Puntos Perdidos",
+  "pointsGained": "Puntos Ganados",
+
+
 
   "nhl": "NHL",
   "mls": "MLS",
+  "nba": "NBA",
+  "pga": "PGA",
 
   "season": "Temporada",
   "sort": "Ordenar",

@@ -12,6 +12,8 @@
   "nhlStats": "NHL Team Statistics",
   "mlsStats": "MLS Team Statistics",
   "nbaStats": "NBA Team Statistics",
+  "pgaStats": "PGA Statistics",
+  
 
   "team": "Team",
   "teams": "Teams",
@@ -30,8 +32,21 @@
   "amount": "Amount",
   "FGM": "FGM",
 
+
+
+  "rank": "Ranking",
+  "name": "Name",
+  "player": "Player",
+  "score": "Score",
+  "avgPoints": "Average Points",
+  "totalPoints": "Total Points",
+  "pointsLost": "Points Lost",
+  "pointsGained": "Points Gained",
+
   "nhl": "NHL",
   "mls": "MLS",
+  "nba": "NBA",
+  "pga": "PGA",
 
   "selectLanguage": "Language",
   "year": "Year",

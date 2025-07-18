@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <div class="description-section">
-      
+
       <p class="description-text">{{ $t('description1') }}</p>
       <p class="description2-text">{{ $t('description2') }}</p>
       <p class="description3-text">{{ $t('description3') }}</p>
@@ -39,6 +39,11 @@
         <ColumnChart/>
       </div>
 
+      <div>
+        <h2 class="nba-stats">{{$t('pgaStats')}}</h2>
+        <GolfersList/>
+      </div>
+
     </div>
 
   </div>
@@ -50,6 +55,7 @@
 import BarChart from '../components/BarChart.vue';
 import LineChart from '../components/LineChart.vue';
 import ColumnChart from '../components/ColumnChart.vue';
+import GolfersList from '../components/GolfersList.vue';
 import { useI18n} from 'vue-i18n';
 
 </script>
