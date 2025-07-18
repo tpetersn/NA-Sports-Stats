@@ -17,7 +17,14 @@
 
       <div>
         <section id="nhl"></section>
-        <img src="/images/hockey-stadium2.webp" alt="hockey rink" class="hockey-img" />
+
+        <div class="banner-images">
+          
+          <img src="/images/hockey-stadium2.webp" alt="hockey rink" class="sport-img" />
+
+          <img src="/images/nhl-logo4.png" alt="overlay" class="sport-logo">
+        </div>
+        
         <p class="nhl-description">{{ $t('nhl-description') }}</p>
       </div>
 
@@ -31,7 +38,14 @@
 
       <div>
         <section id="mls"></section>
-        <img src="/images/soccer-pitch2.webp" alt="soccer arena" class="soccer-img" />
+        <div class="banner-images">
+          
+          <img src="/images/soccer-pitch2.webp" alt="soccer pitch" class="sport-img" />
+
+          <img src="/images/mls-logo.png" alt="overlay" class="sport-logo">
+        </div>
+        
+        
         <p class="mls-description">{{ $t('mls-description') }}</p>
       </div>
 
@@ -43,7 +57,13 @@
 
       <div>
         <section id="nba"></section>
-        <img src="/images/bball-areana1.webp" alt="basketball arena" class="soccer-img" />
+        <div class="banner-images">
+          
+          <img src="/images/bball-areana1.webp" alt="basketball arena" class="sport-img" />
+
+          <img src="/images/nba-logo3.png" alt="overlay" class="nba-logo">
+        </div>
+        
         <p class="mls-description">{{ $t('mls-description') }}</p>
       </div>
 
@@ -52,9 +72,22 @@
         <ColumnChart/>
       </div>
 
+
+      <div>
+        <section id="pga"></section>
+
+        <div class="banner-images">
+          
+          <img src="/images/golf-course2.png" alt="soccer pitch" class="sport-img" />
+
+          <img src="/images/pga-logo.png" alt="overlay" class="sport-logo">
+        </div>
+
+      </div>
+
       <div>
         <h2 class="nba-stats">{{$t('pgaStats')}}</h2>
-        <section id="pga"><GolfersList/></section>
+        <GolfersList/>
       </div>
 
     </div>
@@ -128,8 +161,13 @@ import { useI18n} from 'vue-i18n';
 
 
 
+.banner-images {
+  position: relative;
+  width: 100%;
+}
 
-.hockey-img {
+
+.sport-img {
   width: 100%;
   max-height: 225px;
   object-fit: cover;
@@ -138,6 +176,22 @@ import { useI18n} from 'vue-i18n';
   border: 1.2px solid #000000;
   border-radius: 2px;
 }
+.sport-logo {
+  position: absolute;
+  top: 10vw;    /* adjust as needed */
+  left: 10%;   /* adjust as needed */
+  width: 150px; /* or scale relative to base image */
+  pointer-events: none;
+}
+.nba-logo {
+  position: absolute;
+  top: 10vw;    /* adjust as needed */
+  left: 10%;   /* adjust as needed */
+  width: 250px; /* or scale relative to base image */
+  pointer-events: none;
+}
+
+
 .soccer-img {
   width: 100%;
   max-height: 180px;
@@ -224,10 +278,20 @@ import { useI18n} from 'vue-i18n';
     max-height: 300px;
     margin-right: 0;
   }
-  .hockey-img{
+  .sport-img{
     margin-top: 4rem;
   }
+
 }
 
+@media (max-width: 630px) {
+  .sport-logo {
+    top: 15vw;
+  }
+  .nba-logo {
+    top: 15vw; 
+  }
+  
+}
 
 </style>
