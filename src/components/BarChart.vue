@@ -104,7 +104,7 @@ const chartOptions = computed(() => ({
       title: {
         display: true,
         text: t(selectedMetric.value),  
-        font: { size: 18 },
+        font: { size: 14 },
         padding: { bottom: 10 }   
       },
       beginAtZero: true
@@ -113,7 +113,7 @@ const chartOptions = computed(() => ({
     y: {
       
       ticks: {
-        font: { size: 18.5 }
+        font: { size: 18 }
       },
       title: {
         display: true,
