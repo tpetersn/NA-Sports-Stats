@@ -1,13 +1,14 @@
 
 {
   "title": "North American Sports Statistics",
-  "description1": "This website shows statistics on multiple North American sports! ",
-  "description2": " We offer statistics on NHL, MLS and NBA teams, showing their stats in different ways.",
+  "description1": "This website shows statistics on a variety of North American sports! ",
+  "description2": " We offer statistics on NHL, MLS & NBA teams, as well as PGA Golf, showing their league stats in different ways.",
   "description3": "Scroll through the website to find out more!",
 
   "nhl-description": "We show NHL team statistics from the past 5 seasons in a horizontal bar chart.",
   "mls-description": "We show MLS team statistics from the past 8 seasons in a line chart.",
   "nba-description": "We show NBA team statistics from the past 5 seasons in a column chart.",
+  "pga-description": "We show PGA statistics from the past 5 seasons in a list chart.",
 
   "nhlStats": "NHL Team Statistics",
   "mlsStats": "MLS Team Statistics",
@@ -31,6 +32,9 @@
   "none": "None",
   "amount": "Amount",
   "FGM": "FGM",
+  "tournament": "Tournament",
+  "totalScore": "Total Score",
+  "playoffScore": "Playoff Score",
 
 
 
@@ -56,5 +60,5 @@
   "leftStat": "Left Statistic",
   "rightStat": "Right Statistic",
 
-  "copyrights": "All copyrights belong to NHL & MLS"
+  "copyrights": "All copyrights belong to NHL, MLS, NBA and PGA"
 }

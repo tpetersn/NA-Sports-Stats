@@ -16,8 +16,9 @@ const { t } = useI18n();
 
 <style scoped>
 .footer {
-  background-color: #dff6fd;
-  color: #333;
+  background-color: #635a5a;
+  color: #000000;
+  font-weight: bold;
   padding: 0.75rem;
   text-align: center;
   font-size: 0.85rem;

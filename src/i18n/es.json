@@ -1,14 +1,19 @@
 
 {
   "title": "Estadísticas Deportivas de América del Norte",
-  "description": "Esta página muestra estadísticas de equipos de hockey y fútbol de América del Norte.",
+  "description1": "¡Este sitio web muestra estadísticas sobre una variedad de deportes de América del Norte!",
+  "description2": "Ofrecemos estadísticas sobre equipos de NHL, MLS y NBA, así como PGA Golf, mostrando las estadísticas de su liga de diferentes maneras.",
+  "description3": "¡Desplázate por el sitio web para obtener más información!",
+
   "nhl-description": "Mostramos estadísticas de equipos de la NHL de las últimas 5 temporadas en un gráfico de barras horizontal.",
   "mls-description": "Mostramos estadísticas de equipos de la MLS de las últimas 8 temporadas en un gráfico de líneas.",
   "nba-description": "Mostramos estadísticas de equipos de la NBA de las últimas 5 temporadas en un gráfico de líneas.",
+  "pga-description": "Mostramos estadísticas de equipos de la NBA de las últimas 5 temporadas en un gráfico de lista.",
 
   "nhlStats": "Estadísticas de Equipos de la NHL",
   "mlsStats": "Estadísticas de Equipos de la MLS",
   "nbaStats": "Estadísticas de Equipos de la NBA",
+  "pgaStats": "Estadísticas de Equipos de la PGA",
 
   "team": "Equipo",
   "teams": "Equipos",
@@ -25,7 +30,6 @@
   "lowToHigh": "Menor a Mayor",
   "none": "Ninguno",
 
-  "pgaStats": "Estadísticas de PGA",
   "name": "Nombre",
   "rank": "Rango",
   "score": "Puntaje",
@@ -54,6 +58,9 @@
   "year": "Año",
   "amount": "Cantidad",
   "FGM": "FGM",
+  "tournament": "Torneo",
+  "totalScore": "Puntaje Total",
+  "playoffScore": "Puntaje de Playoffs",
 
-  "copyrights": "Todos los derechos de autor pertenecen a la NHL y la MLS"
+  "copyrights": "Todos los derechos de autor pertenecen a NHL, MLS, NBA y PGA."
 }

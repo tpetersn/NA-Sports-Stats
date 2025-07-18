@@ -68,7 +68,7 @@
       </div>
 
       <div>
-        <h2 class="nba-stats">{{$t('nbaStats')}}</h2>
+        <h2 class="mls-stats">{{$t('nbaStats')}}</h2>
         <ColumnChart/>
       </div>
 
@@ -82,11 +82,12 @@
 
           <img src="/images/pga-logo.png" alt="overlay" class="sport-logo">
         </div>
+        <p class="mls-description">{{ $t('pga-description') }}</p>
 
       </div>
 
       <div>
-        <h2 class="nba-stats">{{$t('pgaStats')}}</h2>
+        <h2 class="mls-stats">{{$t('pgaStats')}}</h2>
         <GolfersList/>
       </div>
 
