@@ -113,11 +113,12 @@ import { useI18n} from 'vue-i18n';
   display: flex;
   flex-direction:row;
   align-items: center;
+  background-color: white;
 }
 
 .description-section {
   text-align: center;
-  background-color: hsla(45, 100%, 98%, 0.816);
+  background-color: hsla(0, 0%, 100%, 0.816);
   padding: 1rem;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -178,16 +179,16 @@ import { useI18n} from 'vue-i18n';
 }
 .sport-logo {
   position: absolute;
-  top: 10vw;    /* adjust as needed */
-  left: 10%;   /* adjust as needed */
-  width: 150px; /* or scale relative to base image */
+  top: 10vw;    
+  left: 10%;   
+  width: 150px; 
   pointer-events: none;
 }
 .nba-logo {
   position: absolute;
-  top: 10vw;    /* adjust as needed */
-  left: 10%;   /* adjust as needed */
-  width: 250px; /* or scale relative to base image */
+  top: 10vw;   
+  left: 10%;   
+  width: 250px; 
   pointer-events: none;
 }
 
