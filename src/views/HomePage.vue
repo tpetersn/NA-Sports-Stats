@@ -15,8 +15,10 @@
     
 
 
+      <!-- NHL SECTION -->
       <div>
         <section id="nhl"></section>
+        
 
         <div class="banner-images">
           
@@ -24,17 +26,18 @@
 
           <img src="/images/nhl-logo4.png" alt="overlay" class="sport-logo">
         </div>
+        <div>
+          <h2 class="nhl-stats">{{ $t('nhlStats') }}</h2>
+        </div>
         
         <p class="nhl-description">{{ $t('nhl-description') }}</p>
       </div>
 
-      
-      
-
       <div>
-          <h2 class="nhl-stats">{{ $t('nhlStats') }}</h2>
           <BarChart/>
       </div>
+
+      <!-- MLS SECTION -->
 
       <div>
         <section id="mls"></section>
@@ -44,6 +47,9 @@
 
           <img src="/images/mls-logo.png" alt="overlay" class="sport-logo">
         </div>
+        <div>
+          <h2 class="mls-stats">{{$t('mlsStats')}}</h2>
+        </div>
         
         
         <p class="mls-description">{{ $t('mls-description') }}</p>
@@ -51,10 +57,12 @@
 
 
       <div>
-        <h2 class="mls-stats">{{$t('mlsStats')}}</h2>
+        
         <LineChart/>
       </div>
 
+
+      <!-- NBA SECTION -->
       <div>
         <section id="nba"></section>
         <div class="banner-images">
@@ -63,16 +71,21 @@
 
           <img src="/images/nba-logo3.png" alt="overlay" class="nba-logo">
         </div>
+        <div>
+          <h2 class="mls-stats">{{$t('nbaStats')}}</h2>
+        </div>
         
         <p class="mls-description">{{ $t('mls-description') }}</p>
       </div>
 
       <div>
-        <h2 class="mls-stats">{{$t('nbaStats')}}</h2>
+        
         <ColumnChart/>
       </div>
 
 
+
+      <!-- PGA SECCTION -->
       <div>
         <section id="pga"></section>
 
@@ -82,12 +95,17 @@
 
           <img src="/images/pga-logo.png" alt="overlay" class="sport-logo">
         </div>
+
+        <div>
+          <h2 class="mls-stats">{{$t('pgaStats')}}</h2>
+        </div>
+        
         <p class="mls-description">{{ $t('pga-description') }}</p>
 
       </div>
 
       <div>
-        <h2 class="mls-stats">{{$t('pgaStats')}}</h2>
+        
         <GolfersList/>
       </div>
 
