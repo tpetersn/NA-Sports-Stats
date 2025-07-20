@@ -113,12 +113,11 @@ import { useI18n} from 'vue-i18n';
   display: flex;
   flex-direction:row;
   align-items: center;
-  background-color: #d42f2f;
 }
 
 .description-section {
   text-align: center;
-  background-color: #fffce2;
+  background-color: hsla(45, 100%, 98%, 0.816);
   padding: 1rem;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

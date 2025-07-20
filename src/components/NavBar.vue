@@ -115,5 +115,12 @@ select {
   text-shadow: 1px 1px 1px #000000;
 }
 
+@media (max-width: 800px) {
+  .ff-navbar {
+    flex-direction: column;
+  }
+  
+}
+
 
 </style>

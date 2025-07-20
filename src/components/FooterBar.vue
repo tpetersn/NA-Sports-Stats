@@ -24,7 +24,7 @@ const { t } = useI18n();
   font-size: 0.85rem;
   font-style: italic;
   position: relative;
-
+  border: 2px solid #000000;
 }
 .copyright-icon {
   width: 1rem;
